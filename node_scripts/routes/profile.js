@@ -40,7 +40,6 @@ router.get("/", (req, res) => {
 router
   .route("/signup")
   .post((req, res) => {
-
     firebase.auth().createUserWithEmailAndPassword(req.body.username, req.body.password).then((userCredential) => {
       let user = userCredential.user;
       let userProfile = {
