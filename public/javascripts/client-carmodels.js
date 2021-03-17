@@ -47,7 +47,7 @@ $(document).ready(function() {
 
   function getAllCarModels(){
     $.ajax({
-      url: "http://" + window.location.host + "/carmodels", // In prod env, change url
+      url: "https://" + window.location.host + "/carmodels", // In prod env, change url
       type: 'GET',
       success: (response) => populateCarModelsTable(response),
       error: (jqXHR, textStatus, errorThrown) => {
