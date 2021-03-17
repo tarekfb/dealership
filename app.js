@@ -23,7 +23,7 @@ app.use(express.static("./public"));
 // Serving index.html on GET at root
 app.get("/", (req, res) => {
   res.setHeader('Content-Type', 'text/html');
-  res.sendFile(path.join(__dirname, "..", "public", "views", "index.html"));
+  res.sendFile(path.join(__dirname, "public", "views", "index.html"));
 });
 
 // Setting up server
