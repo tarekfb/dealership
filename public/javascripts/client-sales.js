@@ -29,7 +29,7 @@ $(document).ready(function() {
 
   function getTotalSales(){
     $.ajax({
-      url: "http://" + window.location.host + "/sales", // In prod env, change url
+      url: "https://" + window.location.host + "/sales", // In prod env, change url
       type: 'GET',
       success: (response) => populateTable(response),
       error: (jqXHR, textStatus, errorThrown) => {

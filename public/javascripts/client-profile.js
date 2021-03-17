@@ -6,7 +6,7 @@ $(document).ready(() => {
 
   isLoggedIn();
 
-  //TODO: make global scope var for http://" + window.location.host + "/profile/"
+  //TODO: make global scope var for https://" + window.location.host + "/profile/"
 
   /***************************************
    * CRUD frontend interactions
@@ -77,7 +77,7 @@ $(document).ready(() => {
 
   function isLoggedIn() {
     $.ajax({
-      url: "http://" + window.location.host + "/profile/", // In prod env, change url
+      url: "https://" + window.location.host + "/profile/", // In prod env, change url
       method: 'GET',
       contentType:"application/json",
       success: (response) => handleAuthState(response),
@@ -92,7 +92,7 @@ $(document).ready(() => {
 
   function initSignup(userCredentials){
     $.ajax({
-      url: "http://" + window.location.host + "/profile/signup", // In prod env, change url
+      url: "https://" + window.location.host + "/profile/signup", // In prod env, change url
       method: 'POST',
       data: JSON.stringify(userCredentials),
       contentType: "application/json",
@@ -111,7 +111,7 @@ $(document).ready(() => {
   // TODO: fix
   function initLogin(userCredentials){
     $.ajax({
-      url: "http://" + window.location.host + "/profile/login", // In prod env, change url
+      url: "https://" + window.location.host + "/profile/login", // In prod env, change url
       method: 'POST',
       data: JSON.stringify(userCredentials),
       contentType:"application/json",
@@ -127,7 +127,7 @@ $(document).ready(() => {
 
   function initLogOut() {
     $.ajax({
-      url: "http://" + window.location.host + "/profile/logout", // In prod env, change url
+      url: "https://" + window.location.host + "/profile/logout", // In prod env, change url
       method: 'POST',
       contentType: "application/json",
       success: (response) => onLoggedOut(response),
@@ -142,7 +142,7 @@ $(document).ready(() => {
 
   function initPasswordReset() {
     $.ajax({
-      url: "http://" + window.location.host + "/profile/reset-password", // In prod env, change url
+      url: "https://" + window.location.host + "/profile/reset-password", // In prod env, change url
       method: 'GET',
       success: handleModal("Mail has been sent."), //TODO: display modal with "successfull" if response === "OK"
       error: (jqXHR, textStatus, errorThrown) => {
@@ -157,7 +157,7 @@ $(document).ready(() => {
 
   function setEmployeeID(empInfo){
     $.ajax({
-      url: "http://" + window.location.host + "/profile/set-employee-id", // In prod env, change url
+      url: "https://" + window.location.host + "/profile/set-employee-id", // In prod env, change url
       method: 'POST',
       data: JSON.stringify(empInfo),
       dataType: "json",
@@ -176,7 +176,7 @@ $(document).ready(() => {
 
   function getAllSalesForEmployee(employeeID) {
     $.ajax({
-      url:  `http://${window.location.host}/profile/sales-for-employee`,
+      url:  `https://${window.location.host}/profile/sales-for-employee`,
       method: 'POST',
       data: JSON.stringify(employeeID),
       dataType: "json",

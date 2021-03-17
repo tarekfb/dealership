@@ -43,7 +43,7 @@ $(document).ready(function() {
 
   function getAllEmployees(){
     $.ajax({
-      url: "http://" + window.location.host + "/employees", // In prod env, change url
+      url: "https://" + window.location.host + "/employees", // In prod env, change url
       type: 'GET',
       success: (response) => populateTable(response),
       error: (jqXHR, textStatus, errorThrown) => {

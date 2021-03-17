@@ -67,7 +67,7 @@ $(document).ready(function() {
 
   function deleteCarModel(carModelID){
     $.ajax({
-      url: "http://" + window.location.host + "/carmodels/" + carModelID,
+      url: "https://" + window.location.host + "/carmodels/" + carModelID,
       type: "DELETE",
       dataType: "json",
       success: response => getAllCarModels(),
@@ -88,7 +88,7 @@ $(document).ready(function() {
 
   function addCarModel(carModelParameters){
     $.ajax({
-      url: "http://" + window.location.host + "/carmodels", // In prod env, change url
+      url: "https://" + window.location.host + "/carmodels", // In prod env, change url
       type: 'POST',
       success: response => getAllCarModels(),
       contentType:"application/json",
