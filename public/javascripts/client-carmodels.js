@@ -26,7 +26,8 @@ $(document).ready(function() {
     // ID is null because it is automatically generated in backend
     let itemParameters = {brand: brand, id: null, model: model, price: price};
 
-    addCarModel(itemParameters);
+    handleModal("You're not authorized to perform this action.")
+    //addCarModel(itemParameters);
   });
 
   $("#refresh-list").on("click", function () {
