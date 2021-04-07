@@ -14,7 +14,8 @@ $(document).ready(function() {
 
   $("#delete-carmodel").on('submit', (e) => {
     e.preventDefault();
-    deleteCarModel($("#id-input-delete").val());
+    //deleteCarModel($("#id-input-delete").val());
+    handleModal("You're not authorized to perform this action.");
   });
 
   $("#add-carmodel").on('submit', (e) => {
@@ -26,7 +27,7 @@ $(document).ready(function() {
     // ID is null because it is automatically generated in backend
     let itemParameters = {brand: brand, id: null, model: model, price: price};
 
-    handleModal("You're not authorized to perform this action.")
+    handleModal("You're not authorized to perform this action.");
     //addCarModel(itemParameters);
   });
 
